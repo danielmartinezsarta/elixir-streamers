@@ -8,4 +8,18 @@ defmodule Sample.Enum do
 
         #Elixir, as Ruby, doesn't use return keyword. It returns the last evaluated result.
     end
+
+    #defining a function that receives an empty list works like if(arg is null) -> return nil
+    def first_with_pattern_matching([]) do
+        nil
+    end
+
+    #in this case, the function will return the same result but using pattern matching parameters.
+    def first_with_pattern_matching([head | tail]) do
+        #As pattern matching splits the list in the input of the function
+        #the head variable contains the first element without use hd/1 function.
+        head
+
+    end
+
 end
