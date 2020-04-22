@@ -8,7 +8,8 @@ defmodule ModulePlayground do
     #With this import we fix the problem of inspect/1 local function.
     import Kernel, except: [inspect: 1]
 
-
+    #The alias function aliased the long 
+    alias ModulePlayground.Misc.Util.Math
     #def keyword define a new function inside a module.
     def say_here do
 
@@ -28,5 +29,10 @@ defmodule ModulePlayground do
         puts param
         puts "Ending output."
 
+    end
+
+    def print_sum do
+        #This statement calls the add function defined in misc_util_math.exs file
+        Math.add(1,2)
     end
 end
