@@ -31,5 +31,18 @@ defmodule Sample.Enum do
     def first_patmat_simple([head | _]), do: head
 
 
+    #As example, the following function:
+    """
+    def get_total(quantity, book) do
+        quantity * elem(book, 2)
+    end
+    """
+    #Using pattern matching, the same function could be written like this :
+    def get_total(quantity, {_,_,price}) do
+        quantity * price
+    end
+
+
+
 
 end
