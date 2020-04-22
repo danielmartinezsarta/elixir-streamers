@@ -18,11 +18,18 @@ defmodule Sample.Enum do
     #def first_with_pattern_matching([head | tail]) do #we can discard the unused parameters with an underscore
     def first_with_pattern_matching([head | _]) do
 
-    
+
         #As pattern matching splits the list in the input of the function
         #the head variable contains the first element without use hd/1 function.
         head
 
     end
+
+    #simplify the functions
+    #nice syntax
+    def first_patmat_simple([]), do: nil
+    def first_patmat_simple([head | _]), do: head
+
+
 
 end
