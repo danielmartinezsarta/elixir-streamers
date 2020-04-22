@@ -15,7 +15,10 @@ defmodule Sample.Enum do
     end
 
     #in this case, the function will return the same result but using pattern matching parameters.
-    def first_with_pattern_matching([head | tail]) do
+    #def first_with_pattern_matching([head | tail]) do #we can discard the unused parameters with an underscore
+    def first_with_pattern_matching([head | _]) do
+
+    
         #As pattern matching splits the list in the input of the function
         #the head variable contains the first element without use hd/1 function.
         head
