@@ -42,7 +42,16 @@ defmodule Sample.Enum do
         quantity * price
     end
 
+    #Default parameters example
+    #If a parameter is not present in the call it will take the default value (\\)
+    def add_defparam(list, val \\ 0) do
+        [val | list]
+    end
 
+    #first simply functions with default parameters
+    #we have to change the order of the functions to avoid an arity error
+    def first_patmat_defparam([head | _]), do: head
+    def first_patmat_defparam([], val \\ nil), do: val
 
-
+    
 end
