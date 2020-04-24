@@ -53,5 +53,14 @@ defmodule Sample.Enum do
     def first_patmat_defparam([head | _]), do: head
     def first_patmat_defparam([], val \\ nil), do: val
 
-    
+
+    #Optimization of the first function due to not-empty list won't work with two parameters.
+    #First we can do the function signature with parameters and default value
+    def first_opt(list, val \\ nil)
+    #Then we can implement the not-empty list function with discard parameters as long as we don't need tail or val parameters
+    def first_opt([head | _], _), do: head
+    #Finally we can implement the empty list function without default value because the function signature
+    def first_opt([], val), do: val
+
+
 end
