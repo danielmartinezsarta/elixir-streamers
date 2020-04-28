@@ -18,4 +18,18 @@ defmodule Sample.Calendar do
     #Also admits type check functions like is_atom/1, is_number/1, is_integer/1, is_pid/1, and so on
     #And functions like abs(number), lenght(list), elem(tuple,n), hd(list), tl(list)
 
+
+    #Cond control statement whe need nested ifs with more clear sysntax
+    def day_abbr(day) do
+
+        cond do
+            day == :Monday -> "M"
+            day == :Tuesday -> "Tu"
+            day == :Wednesday -> "W"
+            day == :Thursday -> "Th"
+            day == :Friday -> "F"            
+            day == :Saturday -> "Sa"
+            day == :Sunday -> "Su"
+        end
+    end
 end
