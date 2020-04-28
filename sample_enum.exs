@@ -63,4 +63,11 @@ defmodule Sample.Enum do
     def first_opt([], val), do: val
 
 
+    #Private function definition with defp macro
+    #this function only will be called from another function inside this module
+    defp trace do
+        IO.puts("Print in a private function")
+    end
+
+
 end
