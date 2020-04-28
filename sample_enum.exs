@@ -68,6 +68,4 @@ defmodule Sample.Enum do
     defp trace do
         IO.puts("Print in a private function")
     end
-
-
 end
