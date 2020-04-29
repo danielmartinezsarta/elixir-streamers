@@ -23,7 +23,8 @@ defmodule PsTweet.MixProject do
   defp deps do
     [
       {:credo, "~> 1.4"},
-      {:quantum, "~> 2.4"}
+      {:quantum, "~> 2.4"},
+      {:extwitter, "~> 0.12.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
