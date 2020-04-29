@@ -1,0 +1,4 @@
+Line #1
+Line #2   
+Third line   
+Esta es una linea muy larga que no deberia mostrarse en la lista final usando filter por que tiene mas de 140 caracteres. En Twitter solo se admiten tweets que contengan 140 caracteres o menos.
