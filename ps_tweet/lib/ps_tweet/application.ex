@@ -9,6 +9,7 @@ defmodule PsTweet.Application do
     children = [
       # Starts a worker by calling: PsTweet.Worker.start_link(arg)
       # {PsTweet.Worker, arg}
+      PsTweet.TweetServer,
       PsTweet.Scheduler
     ]
 
